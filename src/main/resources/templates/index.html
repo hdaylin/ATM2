@@ -27,17 +27,17 @@
 
 <div class="container">
     <div class="jumbotron">
-        <h1>Welcome the ATM</h1>
+        <h1>Welcome to the ATM</h1>
         <p>An application made by Daylin Henry </p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
     </div>
 
 
-<form action="#" th:action="@{/add}" th:object="${transaction}" method = "post">
+<form action="#" th:action="@{/transaction}" th:object="${transaction}" method = "post">
 
 
     <div class="form-group">
-        <label for="acct">acct:</label>
+        <label for="acct">Acount Number:</label>
         <input type="text" th:field="*{acct}" target="_blank" class="form-control" id="acct" placeholder="account number"/>
     </div>
 
