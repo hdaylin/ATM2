@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" >
+<head th:replace="base :: head" >
+    <meta charset="UTF-8" />
+    <title>ATM APP</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome the ATM</h1>
+        <p>An application made by Daylin Henry </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+</div>
+
+<form action="#" th:action="@{/add}" th:object="${transaction}" method = "post">
+
+
+    <div class="form-group">
+        <label for="id">ID: </label>
+        <input type="text" th:field="*{id}"  class="form-control" id="id" placeholder="Add id"/>
+        <span th:if="${#fields.hasErrors('id')}" th:errors="*{id}">id  Error</span>
+    </div>
+
+    <div class="form-group">
+        <label for="acct">acct:</label>
+        <input type="text" th:field="*{acct}" target="_blank" class="form-control" id="acct" placeholder="account number"/>
+    </div>
+
+    <div class="form-group">
+        <label for="action">action:</label>
+        <input type="text" th:field="*{action}" target="_blank" class="form-control" id="action" placeholder="Action"/>
+    </div>
+
+    <div class="form-group">
+        <label for="amount">amount:</label>
+        <input type="text" th:field="*{amount}" target="_blank" class="form-control" id="amount" placeholder="Amount"/>
+    </div>
+
+    <div class="form-group">
+        <label for="reason">reason:</label>
+        <input type="text" th:field="*{reason}" target="_blank" class="form-control" id="reason" placeholder="Reason"/>
+    </div>
+
+
+    <button type="submit" class="btn btn-default">Make transaction</button>
+</form>
+
+
+
+</body>
+
+</html>
