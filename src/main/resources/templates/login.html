@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+<html lang="en" xmlns:th="www.thymeleaf.org" >
+<head th:replace="base :: head" >
+    <meta charset="UTF-8" />
+    <title>ATM APP</title>
 </head>
 <body>
-$END$
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+
+<img src="http://www.twitrcovers.com/wp-content/uploads/2014/05/One-Sunny-Spring-Day-l.jpg"/>.
+<div class ="wrapper">
+<div class="container">
+
+
+    <i class="fa fa-leaf" aria-hidden="true"></i> <h1>Spring Boot ATM Login </h1>
+<form th:action="@{/login}" method="post">
+
+
+
+    <div class="form-group">
+        <label for="username">User Name: </label>
+        <input type="text" id="username" name="username" placeholder="username" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password </label>
+        <input type="text" id="password" name="password" placeholder="password" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-info">Sign In</button>
+
+<!--
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>-->
+
+</form>
+
+    <br/> <br/> <br/> <br/> <br/>
+
+</div>
+</div>
 </body>
 </html>

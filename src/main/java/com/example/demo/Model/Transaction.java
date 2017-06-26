@@ -17,9 +17,18 @@ public class Transaction {
     private int id;
     private int acct;
     private String action;
+
     private double amount;
     private String reason;
+    private double balance;
 
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
 
     public int getId() {
         return id;
