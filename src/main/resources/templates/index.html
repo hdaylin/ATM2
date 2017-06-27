@@ -69,17 +69,16 @@
         <input type="text" th:field="*{acct}" target="_blank" class="form-control" id="acct" placeholder="account number"/>
     </div>
 
-    <div class="form-group">
+    <!--<div class="form-group">
         <label for="action">action:</label>
         <input class="form-control input-sm" type="text" id="action" th:field="*{action}" placeholder="action"/>
 
-    </div>
+    </div>-->
 
-    <select name="huge" class="selectpicker" data-style="btn-info btn-fill btn-block">
+    <select name="huge" class="selectpicker" th:field="*{action}" type="text" data-style="btn-info btn-fill btn-block">
     <option value="deposit">Deposit</option>
     <option value="withdraw">Withdraw</option>
     </select>
-
 
 
 
